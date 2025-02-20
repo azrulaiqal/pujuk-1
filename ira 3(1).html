@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      background-color: #ffcccb; /* Soft pink */
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff1493; /* Deep pink */
+      margin-bottom: 20px;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    img {
+      max-width: 30%; /* Adjust based on your preference */
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    video {
+      max-width: 80%; /* Adjust based on your preference */
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .note {
+      font-size: 1.5rem;
+      color: #ff69b4; /* Hot pink */
+      margin: 20px 0;
+      font-style: italic;
+    }
+    button {
+      background-color: #ff69b4; /* Hot pink */
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      font-size: 1.5rem;
+      color: #ff1493; /* Deep pink */
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>For My Love 💖</h1>
+
+  <!-- Image Container -->
+  <div class="image-container">
+    <!-- Replace these with your own .jpg files -->
+    <img src="photo1.jpg" alt="Our Memory 1">
+    <img src="photo2.jpg" alt="Our Memory 2">
+    <img src="photo3.jpg" alt="Our Memory 3">
+  </div>
+
+  <!-- Replace this with your own .mp4 file -->
+  <video controls>
+    <source src="memory.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p class="note">Every moment with you is a treasure. You make my life brighter and more beautiful. I love you more than words can say. 💕</p>
+
+  <button id="lovedButton">Loved 💖</button>
+  <p id="sweetMessage" class="message">You are the most amazing person in my life. Your smile is my favorite thing in the world. I love you to the moon and back! 🌙💖</p>
+
+  <!-- Replace this with your own .mp3 file -->
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Replace this with your own .mp3 file -->
+  <audio id="heartSound">
+    <source src="heartbeat.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const lovedButton = document.getElementById('lovedButton');
+    const sweetMessage = document.getElementById('sweetMessage');
+    const heartSound = document.getElementById('heartSound');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    lovedButton.addEventListener('click', () => {
+      // Play heart sound
+      heartSound.play();
+
+      // Show sweet message
+      sweetMessage.style.display = 'block';
+
+      // Change button text
+      lovedButton.textContent = "I Love You More! 💕";
+
+      // Optional: Add confetti effect (if you want to make it extra special)
+      setTimeout(() => {
+        alert("You are my everything. Thank you for being in my life. 💖");
+      }, 1000);
+    });
+
+    // Play background music when the page loads
+    backgroundMusic.play();
+  </script>
+</body>
+</html>
